@@ -16,6 +16,11 @@
 		BE1E38F020AB1B3A000E653D /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1E38EF20AB1B3A000E653D /* Story.swift */; };
 		BE1E38F220AB1BE5000E653D /* ChooseStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1E38F120AB1BE5000E653D /* ChooseStoryViewController.swift */; };
 		BE1E38F420AB27AD000E653D /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1E38F320AB27AD000E653D /* StoryViewController.swift */; };
+		BE2F077620AEF22400F77359 /* NPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2F077520AEF22400F77359 /* NPC.swift */; };
+		BE2F077820AEF23000F77359 /* Dungeon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2F077720AEF23000F77359 /* Dungeon.swift */; };
+		BE2F077A20AEF23A00F77359 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2F077920AEF23A00F77359 /* Item.swift */; };
+		BE2F077C20AEF3A000F77359 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2F077B20AEF3A000F77359 /* Element.swift */; };
+		BE2F078020AF190B00F77359 /* AdventureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2F077F20AF190B00F77359 /* AdventureViewController.swift */; };
 		BE7CCEBC20AC672400B8C0B2 /* ElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7CCEBB20AC672400B8C0B2 /* ElementCell.swift */; };
 		BE7CCEBE20ADC14F00B8C0B2 /* ElementCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7CCEBD20ADC14F00B8C0B2 /* ElementCellDelegate.swift */; };
 		BE7CCEC020ADCD2A00B8C0B2 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7CCEBF20ADCD2A00B8C0B2 /* DetailsViewController.swift */; };
@@ -34,6 +39,11 @@
 		BE1E38EF20AB1B3A000E653D /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		BE1E38F120AB1BE5000E653D /* ChooseStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseStoryViewController.swift; sourceTree = "<group>"; };
 		BE1E38F320AB27AD000E653D /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
+		BE2F077520AEF22400F77359 /* NPC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPC.swift; sourceTree = "<group>"; };
+		BE2F077720AEF23000F77359 /* Dungeon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dungeon.swift; sourceTree = "<group>"; };
+		BE2F077920AEF23A00F77359 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		BE2F077B20AEF3A000F77359 /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
+		BE2F077F20AF190B00F77359 /* AdventureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventureViewController.swift; sourceTree = "<group>"; };
 		BE7CCEBB20AC672400B8C0B2 /* ElementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCell.swift; sourceTree = "<group>"; };
 		BE7CCEBD20ADC14F00B8C0B2 /* ElementCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCellDelegate.swift; sourceTree = "<group>"; };
 		BE7CCEBF20ADCD2A00B8C0B2 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -75,10 +85,15 @@
 				BE1E38ED20AB1A04000E653D /* StoryCell.swift */,
 				BE1E38DB20AB1507000E653D /* ViewController.swift */,
 				BE1E38DD20AB1507000E653D /* Main.storyboard */,
+				BE2F077F20AF190B00F77359 /* AdventureViewController.swift */,
 				BE7CCEBB20AC672400B8C0B2 /* ElementCell.swift */,
 				BE1E38F320AB27AD000E653D /* StoryViewController.swift */,
 				BE7CCEBD20ADC14F00B8C0B2 /* ElementCellDelegate.swift */,
 				BE1E38EF20AB1B3A000E653D /* Story.swift */,
+				BE2F077B20AEF3A000F77359 /* Element.swift */,
+				BE2F077520AEF22400F77359 /* NPC.swift */,
+				BE2F077720AEF23000F77359 /* Dungeon.swift */,
+				BE2F077920AEF23A00F77359 /* Item.swift */,
 				BE1E38E020AB1507000E653D /* Assets.xcassets */,
 				BE1E38E220AB1507000E653D /* LaunchScreen.storyboard */,
 				BE1E38E520AB1507000E653D /* Info.plist */,
@@ -162,13 +177,18 @@
 			files = (
 				BE7CCEC220ADCEB600B8C0B2 /* DetailCellTableViewCell.swift in Sources */,
 				BE7CCEBC20AC672400B8C0B2 /* ElementCell.swift in Sources */,
+				BE2F078020AF190B00F77359 /* AdventureViewController.swift in Sources */,
 				BE7CCEBE20ADC14F00B8C0B2 /* ElementCellDelegate.swift in Sources */,
 				BE7CCEC020ADCD2A00B8C0B2 /* DetailsViewController.swift in Sources */,
+				BE2F077820AEF23000F77359 /* Dungeon.swift in Sources */,
 				BE1E38F420AB27AD000E653D /* StoryViewController.swift in Sources */,
 				BE1E38DC20AB1507000E653D /* ViewController.swift in Sources */,
+				BE2F077A20AEF23A00F77359 /* Item.swift in Sources */,
 				BE1E38F220AB1BE5000E653D /* ChooseStoryViewController.swift in Sources */,
+				BE2F077620AEF22400F77359 /* NPC.swift in Sources */,
 				BE1E38DA20AB1507000E653D /* AppDelegate.swift in Sources */,
 				BE1E38EE20AB1A04000E653D /* StoryCell.swift in Sources */,
+				BE2F077C20AEF3A000F77359 /* Element.swift in Sources */,
 				BE1E38F020AB1B3A000E653D /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +327,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2CU37X4Q76;
 				INFOPLIST_FILE = NanoChallengeApp2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.NanoChallengeApp2;
@@ -321,6 +342,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2CU37X4Q76;
 				INFOPLIST_FILE = NanoChallengeApp2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.NanoChallengeApp2;

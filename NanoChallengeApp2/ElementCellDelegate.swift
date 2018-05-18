@@ -9,4 +9,5 @@
 protocol ElementCellDelegate {
 	func addElement(_ sender: ElementCell)
 	func removeElement(_ sender: ElementCell)
+	func showDetails(_ sender: ElementCell)
 }

@@ -19,6 +19,7 @@ class StoryViewController: UIViewController {
 	
 	var story: Story?
 	let titles = ["NPCs", "Dungeons", "Items"]
+	var selectedElement: Element?
 	override func viewDidLoad() {
         super.viewDidLoad()
 		self.imageView.image = story?.image
@@ -34,6 +35,11 @@ class StoryViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	
+	@IBAction func createAdventury(_ sender: UIButton) {
+		
+	}
 	
 }
 
@@ -69,23 +75,40 @@ extension StoryViewController: UITableViewDelegate, UITableViewDataSource {
 		cell.elementImage.image = element?.image
 		cell.name.text = element?.name
 		cell.delegate = self
-
+		
+		
 		
 		return cell
 	}
 }
 
 extension StoryViewController: ElementCellDelegate {
+	
+	
+	func showDetails(_ sender: ElementCell) {
+		let section = (tableView.indexPath(for: sender)?.section)
+		let row = (tableView.indexPath(for: sender)?.row)
+		let array = self.story?.elements[section!]
+		let element = array![row!]
+		self.selectedElement = element
+		performSegue(withIdentifier: "showDetails", sender: Any?.self)
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "showDetails" {
+			let DetailsVC = segue.destination as! DetailsViewController
+			DetailsVC.element = self.selectedElement
+		} else if segue.identifier == "createAdventure" {
+			let adventuryVC = segue.destination as! AdventureViewController
+			adventuryVC.story = self.story
+		}
+	}
+	
 	func removeElement(_ sender: ElementCell) {
 		let section = (tableView.indexPath(for: sender)?.section)
 		let row = (tableView.indexPath(for: sender)?.row)
-		
 		let array = self.story?.elements[section!]
-		
 		let element = array![row!]
-		
-		print("Removido Elemento da section \(section) e row \(row)")
-
 		if let index = self.story?.addedElements.index(of: element) {
 			self.story?.addedElements.remove(at: index)
 		}
@@ -94,9 +117,8 @@ extension StoryViewController: ElementCellDelegate {
 	func addElement(_ sender: ElementCell) {
 		let section = (tableView.indexPath(for: sender)?.section)
 		let row = (tableView.indexPath(for: sender)?.row)
-		print("Adicionado elemento da section \(section) e row \(row)")
 		self.story?.addedElements.append((self.story?.elements[section!]![row!])!)
-		
-		
 	}
+	
+	
 }

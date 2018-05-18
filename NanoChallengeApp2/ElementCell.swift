@@ -23,6 +23,10 @@ class ElementCell: UITableViewCell {
 		self.elementImage.layer.cornerRadius = self.elementImage.frame.size.width/2
 		self.elementImage.clipsToBounds = true
 		self.check.isHidden = true
+		
+		let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showDetails(_:)))
+		self.elementImage.isUserInteractionEnabled = true
+		self.elementImage.addGestureRecognizer(tapGestureRecognizer)
     }
 	
 	
@@ -43,6 +47,10 @@ class ElementCell: UITableViewCell {
 			self.button.setImage(#imageLiteral(resourceName: "plus"), for: .normal)
 			delegate?.removeElement(self)
 		}
+	}
+	
+	@objc func showDetails(_ sender: ElementCell) {
+		delegate?.showDetails(self)
 	}
 	
 	

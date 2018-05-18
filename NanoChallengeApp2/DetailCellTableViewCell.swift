@@ -3,14 +3,17 @@ import UIKit
 
 class DetailCellTableViewCell: UITableViewCell {
 
-	@IBOutlet weak var detailCellImage: UIImageView!
-	@IBOutlet weak var detailCellText: UITextView!
+	@IBOutlet weak var cellImage: UIImageView!
+	@IBOutlet weak var name: UILabel!
+	@IBOutlet weak var featureDescription: UITextView!
 	
 	override func awakeFromNib() {
         super.awakeFromNib()
 		
-		detailCellImage.layer.masksToBounds = false
-		detailCellImage.layer.cornerRadius = detailCellImage.frame.size.width/2
-		detailCellImage.clipsToBounds = true
+		cellImage.layer.masksToBounds = false
+		cellImage.layer.cornerRadius = cellImage.frame.size.width/2
+		cellImage.clipsToBounds = true
+		
+		name.sizeToFit()
     }
 }

@@ -10,20 +10,20 @@ import UIKit
 
 class Story: NSObject {
 	
-	struct Element: Equatable {
-		
-		var name: String
-		var image: UIImage
-		
-		init(name: String, image: UIImage) {
-			self.image = image
-			self.name = name
-		}
-		
-		static func ==(lhs: Story.Element, rhs: Story.Element) -> Bool {
-			return lhs.name == rhs.name
-		}
-	}
+//	struct Element: Equatable {
+//
+//		var name: String
+//		var image: UIImage
+//
+//		init(name: String, image: UIImage) {
+//			self.image = image
+//			self.name = name
+//		}
+//
+//		static func == (lhs: Story.Element, rhs: Story.Element) -> Bool {
+//			return lhs.name == rhs.name
+//		}
+//	}
 	
 	enum Elements: Int {
 		case NPC = 0
@@ -35,9 +35,9 @@ class Story: NSObject {
 	var iconName: String
 	var image: UIImage?
 	var storyDescription: String
-	var NPCs: [Element] = [Element(name: "Sonic", image: #imageLiteral(resourceName: "smallville")), Element(name: "Star Wars", image: #imageLiteral(resourceName: "star-wars"))]
-	var dungeons: [Element] = []
-	var items: [Element] = []
+	var NPCs: [NPC] = [NPC(name: "Sonic", image: #imageLiteral(resourceName: "smallville"), description: "Teste", features: [("Testes", #imageLiteral(resourceName: "skull"))]), NPC(name: "Star Wars", image: #imageLiteral(resourceName: "star-wars"), description: "Teste", features: [("Testes", #imageLiteral(resourceName: "skull"))])]
+	var dungeons: [Dungeon] = []
+	var items: [Item] = []
 	var elements = [Int: [Element]]()
 	var addedElements = [Element]()
 	
