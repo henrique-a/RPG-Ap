@@ -101,14 +101,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SPb-J9-u0S">
-                                <rect key="frame" x="0.0" y="64" width="375" height="132"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="SPb-J9-u0S" secondAttribute="height" multiplier="125:44" id="rx6-Kg-JUH"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SPb-J9-u0S">
+                                <rect key="frame" x="0.0" y="64" width="375" height="133.5"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="guh-ni-kna">
-                                <rect key="frame" x="0.0" y="342" width="375" height="287"/>
+                                <rect key="frame" x="0.0" y="362" width="375" height="267"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="elementCell" rowHeight="100" id="MUr-5I-Ibk" customClass="ElementCell" customModule="NanoChallengeApp2" customModuleProvider="target">
@@ -176,14 +173,13 @@
                                 <rect key="frame" x="164" y="637" width="46" height="30"/>
                                 <state key="normal" title="Create"/>
                                 <connections>
-                                    <action selector="createAdventury:" destination="TJO-ME-5CA" eventType="touchUpInside" id="hRO-nk-b4m"/>
-                                    <segue destination="NZ3-up-ZQz" kind="show" identifier="createAdventury" id="XrF-fD-LCs"/>
+                                    <action selector="createAdventury:" destination="TJO-ME-5CA" eventType="touchUpInside" id="5E2-oA-oq6"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cM2-H0-lII">
-                                <rect key="frame" x="16" y="204" width="343" height="130"/>
+                                <rect key="frame" x="16" y="205.5" width="343" height="148.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -197,7 +193,8 @@
                             <constraint firstItem="guh-ni-kna" firstAttribute="trailing" secondItem="tqV-ZJ-Usq" secondAttribute="trailing" id="T22-BQ-U4r"/>
                             <constraint firstItem="SPb-J9-u0S" firstAttribute="leading" secondItem="tqV-ZJ-Usq" secondAttribute="leading" id="URM-qK-aDh"/>
                             <constraint firstItem="cM2-H0-lII" firstAttribute="leading" secondItem="tqV-ZJ-Usq" secondAttribute="leading" constant="16" id="Web-1e-QEN"/>
-                            <constraint firstItem="guh-ni-kna" firstAttribute="height" secondItem="zQf-ga-gAF" secondAttribute="height" multiplier="0.43" id="aDG-da-wW3"/>
+                            <constraint firstItem="guh-ni-kna" firstAttribute="height" secondItem="zQf-ga-gAF" secondAttribute="height" multiplier="0.4" id="aDG-da-wW3"/>
+                            <constraint firstItem="SPb-J9-u0S" firstAttribute="height" secondItem="zQf-ga-gAF" secondAttribute="height" multiplier="0.2" id="cgW-EC-WjN"/>
                             <constraint firstItem="xVA-VD-9UX" firstAttribute="bottom" secondItem="tqV-ZJ-Usq" secondAttribute="bottom" id="oYU-1h-Mlp"/>
                             <constraint firstItem="SPb-J9-u0S" firstAttribute="trailing" secondItem="tqV-ZJ-Usq" secondAttribute="trailing" id="w5c-dh-BUf"/>
                             <constraint firstItem="xVA-VD-9UX" firstAttribute="top" secondItem="guh-ni-kna" secondAttribute="bottom" constant="8" id="wV5-G0-Zuy"/>
@@ -207,7 +204,6 @@
                         <viewLayoutGuide key="safeArea" id="tqV-ZJ-Usq"/>
                     </view>
                     <connections>
-                        <outlet property="createAdventury" destination="xVA-VD-9UX" id="Bqk-q6-uAk"/>
                         <outlet property="imageView" destination="SPb-J9-u0S" id="crX-Gb-X4P"/>
                         <outlet property="storyDescription" destination="cM2-H0-lII" id="vdv-zD-nxs"/>
                         <outlet property="tableView" destination="guh-ni-kna" id="zdl-qQ-ovH"/>
@@ -254,7 +250,7 @@
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WK1-Z1-03n">
                                                     <rect key="frame" x="101" y="31" width="242" height="71.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -346,19 +342,53 @@
         <!--Adventure-->
         <scene sceneID="Q7E-Sv-oYU">
             <objects>
-                <viewController id="NZ3-up-ZQz" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PB0-pf-hfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="NZ3-up-ZQz" customClass="AdventureViewController" customModule="NanoChallengeApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="amt-uh-pgn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lJu-Ns-Jce">
+                                <rect key="frame" x="0.0" y="20" width="375" height="133.5"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Dvn-56-XmD">
+                                <rect key="frame" x="16" y="163.5" width="343" height="177.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PWh-vb-GHQ">
+                                <rect key="frame" x="0.0" y="351" width="375" height="267"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PWh-vb-GHQ" firstAttribute="leading" secondItem="MC1-Cm-bYT" secondAttribute="leading" id="2VE-yC-QWQ"/>
+                            <constraint firstItem="PWh-vb-GHQ" firstAttribute="height" secondItem="amt-uh-pgn" secondAttribute="height" multiplier="0.4" id="4fM-zI-ubp"/>
+                            <constraint firstItem="PWh-vb-GHQ" firstAttribute="bottom" secondItem="MC1-Cm-bYT" secondAttribute="bottom" id="8Rn-qJ-lKS"/>
+                            <constraint firstItem="lJu-Ns-Jce" firstAttribute="top" secondItem="MC1-Cm-bYT" secondAttribute="top" id="AIq-N1-P4r"/>
+                            <constraint firstItem="Dvn-56-XmD" firstAttribute="leading" secondItem="MC1-Cm-bYT" secondAttribute="leading" constant="16" id="KfK-0N-evX"/>
+                            <constraint firstItem="lJu-Ns-Jce" firstAttribute="trailing" secondItem="MC1-Cm-bYT" secondAttribute="trailing" id="LTd-lo-m3M"/>
+                            <constraint firstItem="PWh-vb-GHQ" firstAttribute="top" secondItem="Dvn-56-XmD" secondAttribute="bottom" constant="10" id="MXr-bv-3Bf"/>
+                            <constraint firstItem="MC1-Cm-bYT" firstAttribute="trailing" secondItem="Dvn-56-XmD" secondAttribute="trailing" constant="16" id="Pyg-Zm-JlJ"/>
+                            <constraint firstItem="lJu-Ns-Jce" firstAttribute="leading" secondItem="MC1-Cm-bYT" secondAttribute="leading" id="wHJ-X1-iFS"/>
+                            <constraint firstItem="PWh-vb-GHQ" firstAttribute="trailing" secondItem="MC1-Cm-bYT" secondAttribute="trailing" id="wmP-jH-mRa"/>
+                            <constraint firstItem="Dvn-56-XmD" firstAttribute="top" secondItem="lJu-Ns-Jce" secondAttribute="bottom" constant="10" id="ySL-b4-3CO"/>
+                            <constraint firstItem="lJu-Ns-Jce" firstAttribute="width" secondItem="amt-uh-pgn" secondAttribute="width" id="zPM-dA-6xD"/>
+                            <constraint firstItem="lJu-Ns-Jce" firstAttribute="height" secondItem="amt-uh-pgn" secondAttribute="height" multiplier="0.2" id="zjc-oD-Uyz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MC1-Cm-bYT"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Adventure" id="wzS-hh-afh"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="image" destination="lJu-Ns-Jce" id="Ap2-vb-JCr"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PB0-pf-hfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28" y="800"/>
+            <point key="canvasLocation" x="25" y="901"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="DCl-n4-gAH">
@@ -366,6 +396,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="wt4-9H-T0O" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fuu-Kw-sgn">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -383,7 +414,4 @@
         <image name="check" width="64" height="64"/>
         <image name="plus" width="64" height="64"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="XrF-fD-LCs"/>
-    </inferredMetricsTieBreakers>
 </document>

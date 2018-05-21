@@ -22,8 +22,8 @@ class StoryViewController: UIViewController {
 	var selectedElement: Element?
 	override func viewDidLoad() {
         super.viewDidLoad()
-		self.imageView.image = story?.image
-		self.storyDescription.text = story?.storyDescription
+		self.imageView.image = Story.image
+		self.storyDescription.text = Story.storyDescription
 		
 		
 		self.tableView.delegate = self
@@ -39,6 +39,11 @@ class StoryViewController: UIViewController {
 	
 	@IBAction func createAdventury(_ sender: UIButton) {
 		
+		let alert = UIAlertController(title: "Sua aventura foi criada!", message: "Ela foi amarzenada na tela de aventuras", preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (alert: UIAlertAction!) in
+			self.navigationController?.popToRootViewController(animated: true)
+		}))
+		self.present(alert, animated: true)
 	}
 	
 }
@@ -98,9 +103,6 @@ extension StoryViewController: ElementCellDelegate {
 		if segue.identifier == "showDetails" {
 			let DetailsVC = segue.destination as! DetailsViewController
 			DetailsVC.element = self.selectedElement
-		} else if segue.identifier == "createAdventure" {
-			let adventuryVC = segue.destination as! AdventureViewController
-			adventuryVC.story = self.story
 		}
 	}
 	

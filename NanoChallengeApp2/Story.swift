@@ -33,9 +33,9 @@ class Story: NSObject {
 	
 	var icon: UIImage
 	var iconName: String
-	var image: UIImage?
-	var storyDescription: String
-	var NPCs: [NPC] = [NPC(name: "Sonic", image: #imageLiteral(resourceName: "smallville"), description: "Teste", features: [("Testes", #imageLiteral(resourceName: "skull"))]), NPC(name: "Star Wars", image: #imageLiteral(resourceName: "star-wars"), description: "Teste", features: [("Testes", #imageLiteral(resourceName: "skull"))])]
+	static var image: UIImage = #imageLiteral(resourceName: "medieval-landscape1")
+	static var storyDescription: String = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."
+	var NPCs: [NPC] = [NPC(name: "Rei", image: #imageLiteral(resourceName: "Rei"), description: "Rei", features: [("Skill", #imageLiteral(resourceName: "Item-Bag-icon"))]), NPC(name: "Orc", image: #imageLiteral(resourceName: "Orc-icon"), description: "Orc", features: [("Skill", #imageLiteral(resourceName: "Werewolf-icon"))]), NPC(name: "Bruxa", image: #imageLiteral(resourceName: "Bruxa"), description: "Bruxa", features: [("skill", #imageLiteral(resourceName: "Destructive-Magic-icon"))])]
 	var dungeons: [Dungeon] = []
 	var items: [Item] = []
 	var elements = [Int: [Element]]()
@@ -44,8 +44,6 @@ class Story: NSObject {
 	init(icon: UIImage, iconName: String, image: UIImage, storyDescription: String) {
 		self.icon = icon
 		self.iconName = iconName
-		self.image = image
-		self.storyDescription = storyDescription
 		
 		elements[Elements.NPC.rawValue] = self.NPCs
 		elements[Elements.dungeon.rawValue] = self.dungeons

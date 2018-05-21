@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NanoChallengeApp2/StoryViewController.swift"
-            timestampString = "548347348.174624"
+            timestampString = "548607595.01816"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "addElement(_:)"
             landmarkType = "7">
          </BreakpointContent>

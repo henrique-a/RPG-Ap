@@ -5,11 +5,11 @@ class ChooseStoryViewController: UIViewController {
 	
 	@IBOutlet weak var collectionView: UICollectionView!
 	
-	let stories: [Story]  = [Story.init(icon: #imageLiteral(resourceName: "sword"), iconName: "Sword", image: #imageLiteral(resourceName: "sword-image"), storyDescription: "Espada"),
-							 Story.init(icon: #imageLiteral(resourceName: "shield"), iconName: "Shield", image: UIImage(), storyDescription: "Escudo"),
-							 Story.init(icon: #imageLiteral(resourceName: "axe"), iconName: "Axe", image: UIImage(), storyDescription: "Machado"),
-							 Story.init(icon: #imageLiteral(resourceName: "spear"), iconName: "Spear", image: UIImage(), storyDescription: "Lança"),
-							 Story.init(icon: #imageLiteral(resourceName: "skull"), iconName: "Skull", image: UIImage(), storyDescription: "Caveira"),
+	let stories: [Story]  = [Story.init(icon: #imageLiteral(resourceName: "Armadura"), iconName: "Armor", image: #imageLiteral(resourceName: "sword-image"), storyDescription: "Espada"),
+							 Story.init(icon: #imageLiteral(resourceName: "Ovo"), iconName: "Dragon", image: UIImage(), storyDescription: "Escudo"),
+							 Story.init(icon: #imageLiteral(resourceName: "Mapa"), iconName: "Treasure", image: UIImage(), storyDescription: "Machado"),
+							 Story.init(icon: #imageLiteral(resourceName: "Grim-Reaper-icon"), iconName: "Death", image: UIImage(), storyDescription: "Lança"),
+							 Story.init(icon: #imageLiteral(resourceName: "Spell-Book-icon"), iconName: "Spellbook", image: UIImage(), storyDescription: "Caveira"),
 							 Story.init(icon: #imageLiteral(resourceName: "laser-gun"), iconName: "Laser Gun", image: UIImage(), storyDescription: "Arma laser")]
 	
 	override func viewDidLoad() {

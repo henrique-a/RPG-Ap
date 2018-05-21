@@ -12,9 +12,11 @@ class AdventureViewController: UIViewController {
 	
 	var story: Story?
 	
-    override func viewDidLoad() {
+	@IBOutlet weak var image: UIImageView!
+	
+	override func viewDidLoad() {
         super.viewDidLoad()
-
+		self.image.image = Story.image
         // Do any additional setup after loading the view.
     }
 
